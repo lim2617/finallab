@@ -2,15 +2,15 @@
 
 
 let imagesArray = [
-    "../img/turtle-baby.jpg",
-    "../img/image1.JPG",
-    "../img/image2.jpg",
-    "../img/image3.jpg",
-    "../img/image4.jpg",
-    "../img/image5.jpg",
-    "../img/image6.jpg",
-    "../img/image7.jpg",
-    "../img/image8.jpg",
+    "./img/turtle-baby.jpg",
+    "./img/image1.JPG",
+    "./img/image2.jpg",
+    "./img/image3.jpg",
+    "./img/image4.jpg",
+    "./img/image5.jpg",
+    "./img/image6.jpg",
+    "./img/image7.jpg",
+    "./img/image8.jpg",
   ];
 let switches = document.querySelectorAll(".switch");
 
