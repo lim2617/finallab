@@ -3,7 +3,7 @@
 
 let imagesArray = [
     "./img/turtle-baby.jpg",
-    "./img/image1.JPG",
+    "./img/image1.jpg",
     "./img/image2.jpg",
     "./img/image3.jpg",
     "./img/image4.jpg",
