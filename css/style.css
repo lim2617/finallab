@@ -1,0 +1,819 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Padauk&display=swap');
+
+@keyframes menu_in{
+    0% {right: -100%;}
+    100% {right:0;}
+}
+
+html{
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+
+body{
+    background-image: linear-gradient(to bottom right, #ebf8e1,#60a3bc, #0c2461, #050f29,#079992);
+    margin: 0 auto;
+    font-family: 'Padauk', sans-serif;
+    max-width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+h1{
+    font-size: 2.5em;
+    font-family: 'Lalezar', cursive;
+    font-weight: lighter;
+    color: #ebf8e1c4;
+    text-align: center;
+}
+
+.logo img{
+    width: 8em;
+    height: 5em;
+    position: fixed;
+    left:0;
+    padding-top: 0.5em;
+    z-index: 999;
+}
+.navigation{
+    position: relative;
+}
+.menu{
+    padding: 2em;
+    position: absolute;
+    right:0;
+    z-index: 999;
+}
+.menu a, .mobile_menu a{
+    text-decoration: none;
+    color: #b8e994;
+    font-size: 1.3em;
+    padding-right: 2.5em;
+}
+.menu a:hover{
+    color: #050f29;
+    transition: all 0.5s;
+    text-decoration: underline;
+}
+.project_item, .mobile_project_item{
+    position: relative;
+}
+.project_item:hover .items a{
+    display: block;
+}
+.mobile_project_item:hover .mobile_items a{
+    z-index: 999;
+    display: block;
+}
+.items{
+    position: absolute;
+    width: 200%;
+    flex-direction: column;
+    top:130%;
+    left:0;
+    text-align: center;
+    border-radius: 3px;
+    z-index: 999;
+}
+.items a{
+    padding: 1.5em;
+    background-color: #050f29;
+    display: none;
+}
+.items a:hover{
+    background-color: #a9db86;
+    color: #050f29;
+}
+
+#bars{
+    font-size: 3em;
+    color: #4f945e;
+    position: absolute;
+    right: 6%;
+    cursor: pointer;
+    display: none;
+}
+.mobile{
+    width: 100%;
+    height: 1vh;
+    position: relative;
+}
+.mobile_menu{
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 1100%;
+    width: 100vw;
+    font-size: 1.3em;
+    animation: menu_in 0.5s ease-in-out;
+    display: none;
+}
+#checked:checked  ~ .mobile_menu {
+    display: block;
+}
+#checked{
+    display: none;
+}
+
+.mobile_menu a{
+    display: block;
+    background-color: #050f29;
+    padding: 2em;
+    text-align: center;
+}
+.mobile_menu a:hover{
+    background-color: #a9db86;
+    color: #050f29;
+    transition: all 0.5s;
+    text-decoration: underline;
+}
+.mobile_menu span{
+    margin: -20px 0;
+}
+.mobile_items{
+    position: absolute;
+    left:0;
+    width: 100vw;  
+    height: 50vh;
+}
+.mobile_items a{
+    padding: 0.5em;
+    display: none;
+}
+
+.home_banner{
+    position: relative;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+.home_banner_image{
+    justify-content: center; 
+    position: absolute;
+    bottom: -10%;
+    right:10%;
+    z-index: 800;
+}
+.home_banner_image img{
+    width: 70vw;
+    height: 90vh;  
+    transform: rotate(-15deg);
+    object-fit: contain;
+}
+.home_banner_image img:hover{
+    transform: rotate(-5deg);
+}
+.home_banner_left{
+    position: absolute;
+    top:10%;
+    left:0;
+}
+.home_banner_right{
+    position: absolute;
+    width: 20vw;
+    bottom:10%;
+    right:0;
+    color:#82ccdddc;
+    z-index: 998;
+}
+.home_banner h1{
+    color:#0b1d4b;
+    font-size: 3.5em;
+}
+.home_banner h2{
+    width: 20vw;
+    color:#0b1d4b;
+    line-height: 2em;
+}
+.home_banner_right a{
+    text-decoration: none;
+    padding-right: 2em;
+    line-height: 5em;
+    color:#82ccdddc;
+    font-size: 1.2em;
+}
+.home_banner_right a:hover{
+    color: #ebf8e1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.home_banner h3 span{
+    text-transform: uppercase;
+    color: #ebf8e1;
+}
+
+.home_project{
+    margin-top: 10em;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home_projectcard{
+    position: relative;
+    height: 80vh;
+    margin: 0.5em;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.678);
+    box-sizing: border-box;
+}
+.home_projectcard:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3; 
+}
+.card1:before{
+    background-image: url(../img/turtle2.jpg);
+    background-position: center;
+}
+.card2:before{
+    background-image: url(../img/coral.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.card3:before{
+    background-image: url(../img/plastic.jpg);
+    background-position: center;
+}
+.card4:before{
+    background-image: url(../img/research.jpg);
+    background-position: center;
+}
+.home_projectcard h1, a{
+    color:#0b1d4b;
+    position: relative;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.home_projectcard a:hover{
+    color: #60a3bc;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.home_projectcard p{
+    width: 25vw;
+    color:#0b1d4b;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 100;
+    display: none;
+}
+
+.home_impact p{
+    text-align: center;
+    color: #ebf8e1c4;
+    font-size: 1.5em;
+    width: 60%;
+    margin: auto;
+}
+.homeimpact_data{
+    margin-top: 4em;
+}
+.homeimpact_data p{
+    color: #60a3bc;
+}
+.homeimpact_data p:first-child{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.data{
+    flex: 1;
+}
+
+
+.homepartner_logo{
+    width: 70%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.homepartner_logo img{
+    height: 5em;
+    padding-right: 2em;
+    padding-top: 2em;
+}
+
+.sticker{
+    background-color: #f7f1e3;
+    position: sticky;
+    top: 0;
+    height: 6em;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 700;
+}
+.sticker h3{
+    font-size: 1.4em;
+    color: #3c6382;
+    padding-left: 5em;
+}
+.sticker a{
+    text-decoration: none;
+    background-color: #3c6382;
+    color: #f7f1e3;
+    border-radius: 5px;
+    padding: 1.5em;
+}
+.sticker a:hover{
+    background-color: #23394b;
+    transition: all 0.2s ease-in-out;
+}
+.sticker2{
+    display: none;
+}
+
+footer{
+    background-color: rgb(36, 35, 35);
+    color: #f7f1e3;
+    margin-top: 10em;
+    padding: 3em 2em;
+    text-align: center;  
+    
+}
+
+.projectone_banner, .about_banner{
+    position: relative;
+    margin: 6em -13em 3em;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.411);
+}
+.projectone_banner::before, .about_banner::before{
+    content: "";
+    background-image: url("../img/projectone.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10%;
+    z-index: -999;
+}
+.about_banner::before{
+    background-image: url("../img/about_banner.jpg");
+}
+.projectone_banner_heading h1, .about_banner_heading h1{
+    color: #0b1d4b;
+    font-size: 5em;
+}
+.projectone_container, .about_container{
+    width: 80%;
+    margin: 0 auto;
+}
+.projectone_container > div > p, .about_container > div > p{
+    text-align: center;
+    color: #294896;
+    font-size: 1.3em;
+    background-color: rgba(255, 248, 220, 0.493);
+    width: 60vw;
+    margin: 0 auto 3em;
+    border-radius: 10px;
+    padding: 1.5em;
+    font-weight: bold;
+}
+.projectone_container > div > h1 , .about_container > div > h1{
+    border-bottom: thick double rgba(124, 219, 145, 0.692);
+}
+.projectone_container > div > h2, .about_container > div > h2{
+    margin: 0 auto;
+    color: #ebf8e1e5;
+    font-size: 2em;
+    text-align: center;
+}
+.species {
+    justify-content: space-around;
+    margin-bottom: 4em;
+}
+
+.species_card{
+    position: relative;
+}
+.species_card img{
+    width: 19vw;
+    border-radius: 10px;
+}
+.species_card:hover p{
+    font-size: 1.8em;
+}
+
+.overlay{
+    position: absolute;
+    bottom:2%;
+    border-radius: 0 0 10px 10px;
+    color: #ebf8e1;
+    background-color: rgba(0, 0, 0, 0.541);
+    font-size: 1.2em;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in;
+}
+.projectone_threat .flex img{
+    width: 50%;
+    margin: 0 0.5em 5em;
+}
+.threat1 div{
+    justify-content: center;
+    margin-bottom: 5em;
+}
+.threat1 img{
+    width: 50vw;
+}
+
+.gallery_container{
+    width: 80%;
+    height: 100%;
+    margin: 8em auto 0;
+    position: relative;
+}
+.gallery_container h1{
+    font-size: 5em;
+    border-bottom: thick double rgba(124, 219, 145, 0.692);
+}
+.gallery_frame{
+    margin: 0 auto;
+    width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+.display_picture{
+    position: absolute;
+    top:0;
+}
+img {
+    max-width: 100%;
+    transition: all 1s ease-in-out; 
+}
+.switch_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    position: absolute;
+    bottom: -5%;
+    left: 16%;
+}
+.switch_container li{
+    color: #ebf8e1;
+    list-style-type: none;
+    font-size: 5em;
+    cursor: pointer;
+}
+.switch_container li:hover{
+    color: #050f29;
+    transition: 400ms ease-in-out; 
+}
+
+.about_history img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-bottom: 5em;
+}
+.about_contact .flex{
+    justify-content: space-around;
+    margin: 5em auto 5em;
+    flex-wrap: wrap;
+}
+.about_contact img{
+    width: 25vw;
+    border-radius: 20px;
+}
+.about_contact h2{
+    width: 50%;
+ }
+.about_contact h2 span{
+   text-transform: uppercase;
+   color: #23e4da;
+}
+.about_address{
+    align-items: center;
+    width: 60vw;
+    flex-wrap: wrap;
+}
+
+.about_address iframe{
+    border-radius: 20px;
+    width: 50%;
+}
+.about_address h2{
+    color: #9AECDB;
+    font-size: 2em;
+    width: 100%;
+}
+.about_address h3, h5{
+    color: #079992;
+    font-size: 1em;
+    margin: 0;
+}
+.contact_form{
+    flex:2;
+    margin-top: -7em;
+}
+.contact_form .flex{
+    width: 90%;
+    flex-direction: column;
+}
+.contact_form .flex > div{
+    margin-bottom: 1.5em;
+}
+.contact_form .flex h3{
+    font-size: 1.7em;
+    color: #ebf8e1;
+}
+.contact_form .flex label{
+    font-size: 1.2em;
+    color: #9AECDB;
+}
+input[type=text], select, textarea{
+    width: 60%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    padding: 1em 3em;
+    border: 1px solid #23394b;
+    border-radius: 5px;
+    color: #f7f1e3;
+    background-color: #3c6382;
+    font-weight: bold;
+}
+input[type=submit]:hover{
+    background-color: #23394b;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.contact_list{
+    flex:1;
+}
+.contact_list .flex{
+    flex-direction: column;
+    margin-left: -6em;
+    text-align: center;
+}
+.contact_list .flex a *{
+    display: inline;
+    padding: 0.2em;
+    line-height: 2.5em;
+    color: #99da6e;
+}
+.contact_list a{
+    font-size: 1.6em;
+    color: white;
+    padding-right: 2em;
+}
+.contact_media a{
+    font-size: 2em;
+}
+.contact_media a:first-child{
+    color: #6892ec;
+}
+.contact_media a:nth-child(2){
+    color: whitesmoke;
+}
+.contact_media a:last-child{
+    color: rgb(216, 30, 30);
+}
+#error, #error2{
+    color:red;
+    font-size: 0.7em;
+}
+
+
+@media (max-width: 960px){
+    html{
+        font-size: 10px;
+    }
+    body{
+        min-width: 100vw;
+        margin: 0 auto;
+    }
+    #bars{
+        display: block;
+        padding: 0.6em;
+    }
+    .menu{
+        display: none;
+    }
+    .home_banner_image{
+        display:none;
+    }
+    .home_banner_left{
+        position: relative;
+        margin: 2em -10em 3em;
+        height: 90%;
+        display: flex;  
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.37);
+    }
+    .home_banner_left::before{
+        content: "";
+        background-image: url("../img/banner_mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -999;
+    }
+    .home_banner_left h1{
+        font-size: 5em;
+    }
+    .home_banner_left h2{
+        width: 60%;
+        text-align: center;
+        font-size: 3em;
+        line-height: 1.3em;
+    }
+    .home_banner_right{
+        position: static;
+        width: 65vw;
+        margin: 8em auto 7em;
+        color:#b8e994;
+        font-size: 1.3em;
+    }
+    .home_banner a{
+        color:#78e08f;
+        font-size: 1.3em;
+        line-height: 2em;
+    }
+    .home_banner a:hover{
+        color: #ebf8e1;
+        text-decoration: underline;
+        transition: all 0.2s ease-in-out;
+    }
+    .sticker{
+        margin-top: 20em;
+    }
+    .home_projectcard{
+        height: 60vh;
+    }
+    .projectone_banner, .about_banner{
+       height: 50vh;
+    }
+    .projectone_banner_heading h1, .about_banner_heading h1{
+        font-size: 5em;
+    }
+    .gallery_frame{
+        width: 80vw;
+        margin-left: 0;
+    }
+    .mobile_menu{
+        top: 1200%;
+    }
+    
+}
+
+@media (max-width: 480px){
+    html{
+        font-size: 6px;
+    }
+    .home_banner{
+        height: 80vh;
+    }
+    .home_banner_left{
+        margin: 2em -10em 3em;
+        height: 60%;
+    }
+    .sticker{
+        display: none;
+    }
+    .sticker2{
+        display: block;
+        position: fixed;
+        bottom: 10%;
+        right: 0;
+        z-index: 999;
+    }
+    .sticker2:hover a{
+        background-color: #facfa6;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .sticker2 a{
+        background-color: #f7f1e3;
+        color: #3c6382;
+        font-weight: bold;
+        text-decoration: none;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding: 2em;
+    }
+    .home_project{
+        margin-top: 0;
+    }
+    .home_project > div{
+        display: block;
+    }
+    .home_projectcard{
+        height: 30vh;
+        margin-bottom: 2em;
+    }
+    .homeimpact_data{
+        display: block;
+        width:90%;
+    }
+    .data{
+        display: flex;
+        margin-bottom: 5em;
+    }
+    .data p:first-child{
+        flex: 1;
+    }
+    .data p:last-child{
+        flex: 2;
+        text-align: left;
+    }
+    .species{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .species_card{
+        margin-bottom: 3em;
+    }
+    .species_card:hover p{
+        font-size: 1.2em;
+        color: rgb(226, 173, 98);
+        font-weight: bold;
+    }
+    .projectone_banner, .about_banner{
+        height: 30vh;
+    }
+    .species{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 55%
+    }
+    .about_contact img{
+        width: 80%;
+        margin-bottom: 3em;
+    }
+    .about_address{
+        width: 80vw;;
+    }
+    .about_address iframe{
+        height: 200px;
+    }
+    .contact_bottom{
+        flex-direction: column;
+    }
+    .contact_form .flex{
+        width: 100vw;
+    }
+    input[type=text], select, textarea{
+        width: 70%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0.5em;
+    }
+    input[type=submit] {
+        padding: 0.5em 1.5em;
+    }
+    .contact_media{
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+    }
+    .contact_list{
+        font-size: 1.4em;
+    }
+    .mobile_menu{
+        top: 800%;
+    }
+    
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f3477b3dfe.js" crossorigin="anonymous"></script>
+    <title>About Us</title>
+</head>
+
+<header>
+    <nav class="navigation flex">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
+        </a>
+        <div class="menu">
+            <a href="aboutus.html">About Us</a>
+            <span class="project_item">
+                <a href="#">Our Projects <i class='fas fa-chevron-down'></i></a>
+                <div class="items flex">
+                    <a href="projectone.html">Sea Turtle Conservation</a>
+                    <a href="#">Coral Reef Restoration</a>
+                    <a href="#">Environmental Programme</a>
+                    <a href="#">Scientific Research</a>
+                </div>
+            </span>
+            <a href="#">Article</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#">Shop & Donate</a>
+        </div>
+        <div class="mobile">
+            <input id="checked" type="checkbox">
+            <label for="checked" id="bars">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="mobile_menu">
+                <a href="aboutus.html">About Us</a>
+                <span class="mobile_project_item">
+                    <a href="#">Our Projects <i class='fas fa-chevron-down'></i></a>
+                    <div class="mobile_items">
+                        <a href="projectone.html">Sea Turtle Conservation</a>
+                        <a href="#">Coral Reef Restoration</a>
+                        <a href="#">Environmental Programme</a>
+                        <a href="#">Scientific Research</a>
+                    </div>
+                </span>
+                <a href="#">Article</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="#">Shop & Donate</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <section class="about_banner flex">
+        <div class="about_banner_heading">
+            <h1>Our History & Mission</h1>
+        </div>
+    </section>
+    <section class="about_container">
+        <div class="about_history">
+            <h1>Our History</h1>
+            <p>We started as a conservation project run by the Fisheries Department Malaysia (FDM) in 2001 with the aim of preserving turtle nesting sites and their surrounding ecosystems. At the time, the FDM had already been running numerous hatcheries around Malaysia since the 1970s.</p>
+            <p>Since 2017, we have diversified its projects and initiatives, adding the Coral Reef Rehabilitation program in an attempt to reverse damage to the reefs and to encourage protection of the reef from weather, traffic and development. The Animal Welfare Center was built to mitigate an increasing problems of stray cat overpopulation on Tioman Island. We also work with Juara Primary School to foster awareness among the students and community in the importance of conservation and pollution management. The Waste Management & Recycling Program work with the a number of resorts in Juara to collect their plastic and recyclable waste to be sent to a recycling plant the mainland fortnightly.</p>
+            <p>Today, we have been working toward the conservation of sea turtles for more than 10 years, with more than 200 volunteers, school groups and university students from all over the world coming every year to increase our conservation efforts.</p>
+            <img src="../img/coral-restoration.jpg" alt="">
+        </div>
+        <div class="about_mission">
+            <h1>Our Mission</h1>
+            <p>Malaysia being a developing country is trying to balance development whilst retaining its high biodiversity.  Malaysia is the worlds 12th most biodiverse country in the world. The seas of Malaysia and Indonesia are just as amazing with a large proportion of Malaysian seas within the Coral triangle which has the highest marine biodiversity in the world. </p>
+            <p>Our mission is to protect what's left of the nesting sea turtle population in Malaysia and to raise awareness of the devastating issues that are globally affecting these beautiful and highly endangered species. Our aim is to continue to grow our conservation and awareness efforts until we find ourselves in a day where projects like us will no longer need to exist.</p>
+        </div>
+        <div class="about_contact">
+            <h1>Join Us</h1>
+            <div class="flex">
+                <img src="../img/about_volunteer1.jpg" alt="">
+                <img src="../img/about_volunteer2.jpg" alt="">
+                <img src="../img/about_volunteer3.jpg" alt="">
+            </div>
+            <h2>Have you thought about volunteering for something meaningful and be the one who <span>make the change </span>?</h2>
+            <div class="about_address flex">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63497.86866784943!2d102.71297504290747!3d5.9093152808950915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b6c101aced7741%3A0x82bc3dbe074ed77a!2sPerhentian%20Islands!5e0!3m2!1sen!2smy!4v1629691171898!5m2!1sen!2smy" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+                <div>
+                    <h2><i class="far fa-arrow-alt-circle-left"></i> Find us here</h2>
+                    <h3>Address :</h3>
+                    <h5>Kg Seberang Raja, Pulau Perhentian Besar <br> 22300 Besut, Terengganu.</h5>
+                </div>                
+            </div>
+            <h1>Contact Us</h1>
+            <section class="contact_bottom flex">
+                <div class="contact_form">
+                    <form action="#" method="POST" class="flex" id="form"> 
+                        
+                        <div>
+                            <h3 for="name">Name <span id="error"></span></h3>
+                            <input type="text" id= "name" placeholder="Enter your name"/><br>
+                        </div>
+                        <div>
+                            <h3 for="email">Email Address <span id="error2"></span></h3>
+                            <input type="text" id="email" placeholder="Enter your email address"><a href="mailto:hello@hotmail.com"></a><br>
+                        </div>
+                        <div>
+                            <h3>Type of Inquiry</h3>
+                            <select>
+                                <option value="">Individual Volunteering</option>
+                                <option value="">Corporate Volunteering</option>
+                                <option value="">Local Trip</option>
+                                <option value="">University Fieldtrip</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <h3>Type of Programme Interested</h3>
+                            <input type="checkbox" name="programme" id="programme"/><label for="checkbox">Marine Conservation</label><br>
+                            <input type="checkbox" name="programme" id="programme"/><label for="checkbox">Sea Turtle Conservation</label><br>
+                            <input type="checkbox" name="programme" id="programme"/><label for="checkbox">Coral Reef Restoration</label><br>
+                            <input type="checkbox" name="programme" id="programme"/><label for="checkbox">Environmental Awareness</label><br>
+                            <input type="checkbox" name="programme" id="programme"/><label for="checkbox">Other</label><br>
+                        </div>
+                        <div>
+                            <h3>Details</h3>
+                            <textarea cols="30" rows="10" placeholder="Write message" id="message"></textarea><br>
+                        </div>
+                        <div>
+                            <input type="submit" value="Send"><br>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact_list">
+                    <div class="flex">
+                        <a href="tel:+60198765432">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>+60 19 - 8765432</p>
+                        </a>
+                        <a href="mailto:hello@outlook.com">
+                            <i class="far fa-envelope"></i>
+                            <p>hello@outlook.com</p>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-whatsapp"></i> 
+                            <p>+60 12 - 3456789</p>
+                        </a>
+                    </div>
+                    <div class="contact_media">
+                        <a href="#" class="fab fa-facebook"></a>
+                        <a href="#" class="fab fa-instagram-square"></a>
+                        <a href="#" class="fab fa-youtube"></a>
+                    </div>
+                </div>
+            </section>
+            
+            
+        </div>
+    </section>
+
+</body>
+
+
+<footer>Project 2021, all rights reserved</footer>
+
+<script src="js/main.js"></script>
+</html>
